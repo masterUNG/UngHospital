@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:unghopital/widget/home.dart';
 import 'package:unghopital/widget/input_form.dart';
 import 'package:unghopital/widget/list_data.dart';
+import 'package:unghopital/widget/opd_page.dart';
 
 class MainHome extends StatefulWidget {
   @override
@@ -9,7 +10,7 @@ class MainHome extends StatefulWidget {
 }
 
 class _MainHomeState extends State<MainHome> {
-  List<Widget> myWidgets = [Home(), InputForm(), ListData()];
+  List<Widget> myWidgets = [Home(),OpdPage(), InputForm(), ListData()];
   int index = 0;
 
   @override
@@ -28,11 +29,12 @@ class _MainHomeState extends State<MainHome> {
           bottom: TabBar(
             tabs: [
               showIcon(),
+              Text('ผู้ป่วยนอก'),
               showInputForm(),
               Text('ListData', style: TextStyle(fontSize: 20),),
             ],
           ),
-        ),
+        ),body: TabBarView(children: myWidgets,),
       ),
     );
   }
@@ -44,7 +46,7 @@ class _MainHomeState extends State<MainHome> {
             width: 36,
             child: Image.asset('images/home.png'),
           ),
-          Text('InputForm'),
+          Text('Input Form'),
         ],
       );
 
