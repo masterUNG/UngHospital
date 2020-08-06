@@ -25,51 +25,57 @@ class _OpdPageState extends State<OpdPage> {
     );
   }
 
-  Widget buildColumn2() => Card(
-        color: Colors.yellow.shade300,
-        child: Container(
-          padding: EdgeInsets.all(MyConstant().myPadding),
-          width: MediaQuery.of(context).size.width * 0.4,
-          child: Column(
-            children: [
-              Row(
+  Widget buildColumn2() => Column(
+    children: [
+      Card(
+            color: Colors.yellow.shade300,
+            child: Container(
+              padding: EdgeInsets.all(MyConstant().myPadding),
+              width: MediaQuery.of(context).size.width * 0.4,
+              height: 250,
+              child: Column(
                 children: [
-                  buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                  Row(
+                    children: [
+                      buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                      ),
+                      buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                      ),
+                      buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                    ],
+                  ),
                   SizedBox(
                     height: 20,
                     width: 20,
                   ),
-                  buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
-                  SizedBox(
-                    height: 20,
-                    width: 20,
+                  Row(
+                    children: [
+                      buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                      ),
+                      buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                      SizedBox(
+                        height: 20,
+                        width: 20,
+                      ),
+                      buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
+                    ],
                   ),
-                  buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
                 ],
               ),
-              SizedBox(
-                height: 20,
-                width: 20,
-              ),
-              Row(
-                children: [
-                  buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
-                  SizedBox(
-                    height: 20,
-                    width: 20,
-                  ),
-                  buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
-                  SizedBox(
-                    height: 20,
-                    width: 20,
-                  ),
-                  buildNode2(Icons.android, 'ทะเบียนผู้ป่วยใหม่'),
-                ],
-              ),
-            ],
+            ),
           ),
-        ),
-      );
+      Text('Hello Master')
+    ],
+  );
 
   Widget buildColumn1() => Column(
     children: [

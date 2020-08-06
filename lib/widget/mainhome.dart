@@ -3,6 +3,8 @@ import 'package:unghopital/widget/home.dart';
 import 'package:unghopital/widget/input_form.dart';
 import 'package:unghopital/widget/list_data.dart';
 import 'package:unghopital/widget/opd_page.dart';
+import 'package:unghopital/widget/query_demo.dart';
+import 'package:unghopital/widget/search_view_demo.dart';
 
 class MainHome extends StatefulWidget {
   @override
@@ -10,7 +12,14 @@ class MainHome extends StatefulWidget {
 }
 
 class _MainHomeState extends State<MainHome> {
-  List<Widget> myWidgets = [Home(),OpdPage(), InputForm(), ListData()];
+  List<Widget> myWidgets = [
+    Home(),
+    OpdPage(),
+    InputForm(),
+    SearchViewDemo(),
+    ListData(),
+    QueryDemo(),
+  ];
   int index = 0;
 
   @override
@@ -30,15 +39,21 @@ class _MainHomeState extends State<MainHome> {
             tabs: [
               showIcon(),
               Text('ผู้ป่วยนอก'),
-              showInputForm(),
-              Text('ListData', style: TextStyle(fontSize: 20),),
+              showInputForm(),Text('Search View'),
+              Text(
+                'ListData',
+                style: TextStyle(fontSize: 20),
+              ),
+              Text('Query Demo'),
             ],
           ),
-        ),body: TabBarView(children: myWidgets,),
+        ),
+        body: TabBarView(
+          children: myWidgets,
+        ),
       ),
     );
   }
-
 
   Widget showInputForm() => Column(
         children: [
